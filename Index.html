@@ -1,10 +1,17 @@
 <html>
     <head>
         <script type="text/javascript" src="index.js"></script>
+        <h1>Todo List</h1>
     </head>
     <body>
-        <input id="tareaAdd" type="text">
-        <input id="addButton" type="button" onclick="agregrTarea()">
-        <div class="todoList"></div>
+        <div class="containerTodoList">
+            <div class="headerTodoList">
+                <input id="textItem" type="text">
+                <input id="addItem" type="button" value="add Item">
+            </div>
+            <div class="bodyTodoList">
+                <ul id="todoList"></ul>
+            </div>
+        </div>
     </body>
 </html>
