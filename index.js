@@ -5,13 +5,18 @@
     document.getElementById("addItem").addEventListener("click", agregrTarea);
     
     function agregrTarea(){
-        var item = document.createElement('li');
-        var textItem = document.createTextNode($texto.value);
-        var deleteButton = document.createElement('button');
-        deleteButton.addEventListener("click", deleteItem);
-        item.append(textItem);
-        item.append(deleteButton);        
-        $lista.appendChild(item);
+        if($texto.value){
+            var item = document.createElement('li');
+            var textItem = document.createTextNode($texto.value);
+            var deleteButton = document.createElement('div');
+            deleteButton.addEventListener("click", deleteItem);
+            deleteButton.innerHTML='<i class="fas fa-trash-alt"></i>';
+            item.append(textItem);
+            item.append(deleteButton);        
+            $lista.appendChild(item);
+            $texto.value= "";
+        }
+
     }
 
     function deleteItem(){
