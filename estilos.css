@@ -9,9 +9,16 @@ li{
     border-left: 5px solid #ff6a00;
     height: 40px;
     margin-bottom: 10px;
-    line-height: 40px;
     padding-left: 10px;
     background-color: white;
+    overflow: hidden;
+    padding-right: 20px;
+    display: flex;
+}
+li p{
+    margin: 10px 0;
+    width: 90%;
+    overflow: hidden;
 }
 li div{
     float: right;
@@ -38,4 +45,7 @@ li div{
     max-width: 350px;
     padding: 50px;
     background-color: #65656517;
+}
+.removeItem{
+    display: block;
 }
